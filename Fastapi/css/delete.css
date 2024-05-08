@@ -1,0 +1,32 @@
+/* Add your custom styles here */
+
+body {
+    background-image: url('../picture/3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Helvetica', sans-serif; /* Change the font-family as per your preference */
+    color: #333; /* Adjust the text color */
+}
+
+.jumbotron {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust the background-color alpha channel for subtle transparency */
+.btn-danger,
+.form-control {
+    background-color: rgba(220, 53, 69, 0);
+    border: 1px solid rgba(220, 53, 69, 0.5);
+    color: #fff; /* Text color for better visibility on transparent background */
+}
+
+.btn-danger:hover {
+    background-color: rgba(200, 35, 51, 0.1);
+    border: 1px solid rgba(200, 35, 51, 0.7);
+}

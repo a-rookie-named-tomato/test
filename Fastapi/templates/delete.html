@@ -1,0 +1,72 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Car</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function deleteCar() {
+            var id = $("#id").val();
+            $.ajax({
+                url: 'http://127.0.0.1:12345/client/delete',
+                type: 'delete',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    "id": id,
+                }),
+                success: function (data) {
+                    alert('Car deleted: ' + data.message);
+                },
+                error: function () {
+                    alert('An error occurred while deleting the car');
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Delete Car</h1>
+    <label for="id">Car_id:</label><br>
+    <input type="text" id="id" name="id"><br>
+    <input type="button" value="Delete Car" onclick="deleteCar()">
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Car</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../javascript/delete.js"></script> 
+</head>
+<body>
+    <h1>Delete Car</h1>
+    <label for="id">Car_id:</label><br>
+    <input type="text" id="id" name="id"><br>
+    <input type="button" value="Delete Car" onclick="deleteCar()">
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Delete Car</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/delete.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../javascript/delete.js"></script>
+</head>
+<body class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Delete Car</h1>
+        <label for="id">Car ID:</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="id" name="id">
+        </div>
+        <button class="btn btn-danger" onclick="deleteCar()">Delete Car</button>
+    </div>
+</body>
+</html>
+

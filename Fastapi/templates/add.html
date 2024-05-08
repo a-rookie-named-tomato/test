@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Car</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/add.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="../javascript/add.js" defer></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Create Car</h1>
+        <form id="createCarForm">
+            <div class="form-group">
+                <label for="id">ID:</label>
+                <input type="text" class="form-control" id="id" name="id">
+            </div>
+
+            <div class="form-group">
+                <label for="model">Model:</label>
+                <input type="text" class="form-control" id="model" name="model">
+            </div>
+
+            <div class="form-group">
+                <label for="make">Make:</label>
+                <input type="text" class="form-control" id="make" name="make">
+            </div>
+
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <input type="text" class="form-control" id="color" name="color">
+            </div>
+
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <input type="text" class="form-control" id="year" name="year">
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="text" class="form-control" id="price" name="price">
+            </div>
+
+            <div class="form-group">
+                <label for="owner_name">Owner Name:</label>
+                <input type="text" class="form-control" id="owner_name" name="owner_name">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="text" class="form-control" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="s_id">S_ID:</label>
+                <input type="text" class="form-control" id="s_id" name="s_id">
+            </div>
+
+            <div class="form-group">
+                <label for="s_id">Sale_Time:</label>
+                <input type="text" class="form-control" id="sale_time" name="sale_time">
+            </div>
+
+            <div class="form-group">
+                <label for="s_id">Sale_Price:</label>
+                <input type="text" class="form-control" id="sale_price" name="sale_price">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="AddCar()">Add Car</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

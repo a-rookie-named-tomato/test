@@ -1,0 +1,35 @@
+body {
+    background-image: url('../picture/6.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha value for transparency */
+    border: none;
+    border-radius: 10px;
+}
+
+.container {
+    background-color: transparent;
+}
+
+.transparent-input {
+    background-color: transparent !important;
+    border: 1px solid #ced4da; /* Border color to be visible */
+}
+
+
+#imageId {
+    background-color: white !important;
+}
+
+.custom-file-input {
+    opacity: 0;
+}
+

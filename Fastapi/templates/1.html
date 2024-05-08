@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #login-form {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #response-message {
+            margin-top: 15px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<div id="login-form">
+    <h2>Login</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+
+    <button id="login-btn">Login</button>
+    <p class="text-center">
+        <a href="zhuye.html">Forgot Password?</a>
+    </p>
+    <div id="response-message"></div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // Handle login button click
+        $('#login-btn').click(function () {
+            // Get values from input fields
+            var username = $('#username').val();
+            var password = $('#password').val();
+
+            // Create user object
+            var user = {
+                username: username,
+                password: password
+            };
+
+            // Send AJAX POST request
+            $.ajax({
+                url: 'http://127.0.0.1:12345/client/login',
+                type: 'post',
+                contentType: 'application/json',
+                data: JSON.stringify(user),
+                success: function (data) {
+                    console.log("Success Response:", data);
+                    if (data.code === 200) {
+                        alert('Username: ' + data.username + '登录成功');
+                        window.location.href = 'dispose.html';
+                    } else {
+                        alert('登录失败: ' + data.message);
+                    }
+                },
+                error: function () {
+                    console.log("Error occurred");
+                    alert('An error occurred');
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

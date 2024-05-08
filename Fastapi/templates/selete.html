@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Select Car</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/select.css">
+</head>
+<body class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Select Car</h1>
+        <p class="lead">Enter the Car ID or Model below to get information about the car.</p>
+        <hr class="my-4">
+        <label for="id">Car ID or Model:</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="id" name="id">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" onclick="selectCar()">Select Car</button>
+            </div>
+        </div>
+        
+        <div id="carInfoContainer"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../javascript/select.js"></script>
+</body>
+</html>
+

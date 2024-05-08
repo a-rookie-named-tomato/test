@@ -1,0 +1,33 @@
+body {
+    background-image: url('../picture/6.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Set text color to be visible against the background */
+}
+
+.container {
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    color: #fff; /* Text color for labels */
+}
+
+/* Transparent background for form elements */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 5px;
+    color: #fff; /* Text color for form elements */
+}
+
+
